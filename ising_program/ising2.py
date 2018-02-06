@@ -8,7 +8,7 @@ from numpy import genfromtxt
 
 
 mu=-100
-db = 2*genfromtxt('dickbutt.csv', delimiter='\t')-1
+db = 2*genfromtxt('latech.csv', delimiter='\t')-1
 
 # Set up plotter
 fig = plt.figure()
