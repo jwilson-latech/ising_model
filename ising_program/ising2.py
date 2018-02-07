@@ -3,6 +3,7 @@ from numpy import log,exp,tanh
 from scipy.ndimage import convolve
 import matplotlib.pyplot as plt
 import matplotlib.animation as animation
+from numpy.fft import fft2,fftshift
 
 from numpy import genfromtxt
 
@@ -11,7 +12,7 @@ mu=-100
 db = 2*genfromtxt('latech.csv', delimiter='\t')-1
 
 # Set up plotter
-fig = plt.figure()
+fig, axs = plt.subplots(1,2)
 ims=[]
 
 class Ising():
@@ -39,26 +40,27 @@ class Ising():
 		altconfig = 2*np.random.randint(0,2,size=(size,size))-1
 		therand = np.random.rand(size,size)
 		dH = -self.beta*self.config*(
-			2*convolve(config,self.window,mode='wrap') + 0*(1+tanh(m))*db)
+			2*convolve(config,self.window,mode='wrap'))
 		config = np.where(log(therand)<dH,altconfig,config)
 		self.config = config
 		return None
 
 	def evolve(self):
-		global ims
+		global ims,axs
 		for i in range(self.steps):
 			m1 = model.config
 			model.update()
 			m2 = model.config
 			m = m2
-			im=plt.imshow(m,vmin=np.min(m))
-			ims.append([im])
+			im0 = axs[0].imshow(m)
+			im1 = axs[1].imshow(abs(fftshift(fft2(m))))
+			ims.append([im0,im1])
 
 
 
 
 # Running Simulation
-model = Ising(450,1,0,1000)
+model = Ising(100,1,0,1000)
 model.evolve()
 
 

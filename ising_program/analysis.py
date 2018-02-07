@@ -7,8 +7,8 @@ matplotlib.rcParams['text.latex.unicode'] = True
 import matplotlib.pylab as plt
 from scipy.ndimage import convolve
 
-Stats5=load_obj("stats5")
-Stats6=load_obj("stats6")
+Stats5=load_obj("stats6")
+Stats6=load_obj("stats7")
 
 def stats(key):
     return Stats5[key][2:-2]

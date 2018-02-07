@@ -8,10 +8,10 @@ from saveobject import save_obj
 
 N = 100
 steps = 1000
-repeat=10
+repeat=50
 res = 0.01
 b1=0
-b2=10
+b2=3
 
 B=np.arange(b1,b2,res)
 B=B[B!=0]
@@ -27,7 +27,7 @@ mu = ensemble.mu
 
 stats=ensemble.stats
 
-save_obj(stats,"stats7")
+save_obj(stats,"stats8")
 
 
 
