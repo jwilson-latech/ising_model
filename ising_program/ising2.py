@@ -6,13 +6,14 @@ import matplotlib.animation as animation
 from numpy.fft import fft2,fftshift
 
 from numpy import genfromtxt
-
+plt.rc('text', usetex=True)
+plt.rc('font', family='serif')
 
 mu=-100
 db = 2*genfromtxt('latech.csv', delimiter='\t')-1
 
 # Set up plotter
-fig, axs = plt.subplots(1,2)
+fig, axs = plt.subplots(3,2)
 ims=[]
 
 class Ising():
@@ -52,24 +53,39 @@ class Ising():
 			model.update()
 			m2 = model.config
 			m = m2
-			im0 = axs[0].imshow(m)
-			im1 = axs[1].imshow(abs(fftshift(fft2(m))))
-			ims.append([im0,im1])
+			im0 = m
+			#im1 = axs[1].imshow(abs(fftshift(fft2(m))))
+			ims.append(im0)
 
 
 
 
 # Running Simulation
-model = Ising(100,1,0,1000)
+model = Ising(400,1,0,1000)
 model.evolve()
+n=[0,200,400,600,800,1000]
+for i in range(6):
+	ax = plt.subplot(2, 3,i+1)
+	ax.imshow(ims[i],interpolation=None,cmap="pink")
+	ax.set_title(r"$t=%i$"%n[i])
+	ax.set_xticks([])
+	ax.set_yticks([])
 
 
-
-ani = animation.ArtistAnimation(fig, ims, interval=50, blit=True,
-                                repeat_delay=1000)
-
-ani.save('ising.gif', dpi=80, writer='imagemagick')
+plt.tight_layout()
+plt.savefig('latech.pdf', bbox_inches='tight')
 plt.show()
+
+
+
+
+
+
+#ani = animation.ArtistAnimation(fig, ims, interval=50, blit=True,
+#                                repeat_delay=1000)
+
+#ani.save('ising.gif', dpi=80, writer='imagemagick')
+#plt.show()
 
 
 

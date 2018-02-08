@@ -22,7 +22,6 @@ class IsingDist():
 		self.config = 2*np.random.randint(0,2,size=(size,size))-1
 		self.configs = [self.config]
 
-
 	def __del__(self):
 		return None
 
@@ -32,7 +31,7 @@ class IsingDist():
 		return None
 
 	def sample(self,steps):
-		for i in tqdm(range(steps)):
+		for i in range(steps):
 			self.update()
 		self.configs = np.array(self.configs)
 
@@ -58,9 +57,9 @@ class IsingDist():
 		return np.sum(dE)
 
 	def calcDist(self):
-		self.energy()
-		self.magnet()
-		self.prob()
+		self.energy_()
+		self.magnet_()
+		self.prob_()
 
 	def calcEV(self):
 		self.calcDist()
@@ -78,7 +77,7 @@ class IsingDist():
 
 
 
-	def energy(self):
+	def energy_(self):
 		size = self.size
 		configs = self.configs
 		window = np.array([self.window])
@@ -86,13 +85,13 @@ class IsingDist():
 		dE = -configs*(sum_ej+self.mu)
 		self.energy_dist = np.sum(dE,axis=(1,2))/(1.0*size**2)
 
-	def magnet(self):
+	def magnet_(self):
 		size = self.size
 		configs = self.configs
 		M = abs(np.sum(configs,axis=(1,2)))
 		self.magnet_dist = M/(1.0*size**2)
 
-	def prob(self):
+	def prob_(self):
 		beta = self.beta
 		energy = self.energy_dist
 		estar = np.min(energy)

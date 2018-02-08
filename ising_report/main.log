@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017) (preloaded format=xelatex 2017.5.23)  7 FEB 2018 18:11
+This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017) (preloaded format=xelatex 2017.5.23)  7 FEB 2018 23:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -258,37 +258,32 @@ JK)
 (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Try loading font information for U+msa on input line 36.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Try loading font information for U+msa on input line 40.
  (/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 36.
+LaTeX Font Info:    Try loading font information for U+msb on input line 40.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
-]
-File: images/configuration.png Graphic file (type QTm)
-
-<use  "images/configuration.png" > [2]
-File: images/spins.png Graphic file (type QTm)
- <use  "images/spins.png" > [3] [4]
-Overfull \hbox (12.75398pt too wide) in paragraph at lines 130--132
+] [2]
+Overfull \hbox (12.75398pt too wide) in paragraph at lines 108--110
 \TU/lmr/m/n/10 Since $\OML/cmm/m/it/10 H\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ^^[[]
 \OT1/cmr/m/n/10 )$ \TU/lmr/m/n/10 is the minimum value of $\OML/cmm/m/it/10 H$\
 TU/lmr/m/n/10 , it must be the case that $\OML/cmm/m/it/10 H\OT1/cmr/m/n/10 (\O
@@ -297,8 +292,27 @@ ML/cmm/m/it/10 ^^[\OT1/cmr/m/n/10 ) [] \OMS/cmsy/m/n/10 ^^@  []\OML/cmm/m/it/10
 ^^U  []\OT1/cmr/m/n/10 0$
  []
 
+[3]
+Underfull \vbox (badness 3386) has occurred while \output is active []
+
+ [4]
+Overfull \hbox (12.75398pt too wide) in paragraph at lines 136--138
+\TU/lmr/m/n/10 Since $\OML/cmm/m/it/10 H\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ^^[[]
+\OT1/cmr/m/n/10 )$ \TU/lmr/m/n/10 is the minimum value of $\OML/cmm/m/it/10 H$\
+TU/lmr/m/n/10 , it must be the case that $\OML/cmm/m/it/10 H\OT1/cmr/m/n/10 (\O
+ML/cmm/m/it/10 ^^[\OT1/cmr/m/n/10 ) [] \OMS/cmsy/m/n/10 ^^@  []\OML/cmm/m/it/10
+ H\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ^^[[]\OT1/cmr/m/n/10 ) [] \OMS/cmsy/m/n/10 
+^^U  []\OT1/cmr/m/n/10 0$
+ []
+
+[5]
+File: images/configuration.png Graphic file (type QTm)
+ <use  "images/configuration.png" >
+File: images/spins.png Graphic file (type QTm)
+ <use  "images/spins.png" > [6] [7]
+[8]
 File: images/image4_0_0.pdf Graphic file (type QTm)
-<use  "images/image4_0_0.pdf" >
+ <use  "images/image4_0_0.pdf" >
 File: images/image16_0_0.pdf Graphic file (type QTm)
  <use  "images/image16_0_0.pdf" >
 File: images/image64_0_0.pdf Graphic file (type QTm)
@@ -308,14 +322,47 @@ File: images/image256_0_0.pdf Graphic file (type QTm)
  <use  "images/image256_0_0.pdf" >
 File: images/image1024_0_0.pdf Graphic file (type QTm)
 
-<use  "images/image1024_0_0.pdf" > [5] [6] (./main.aux) ) 
+<use  "images/image1024_0_0.pdf" >
+File: images/energy.pdf Graphic file (type QTm)
+ <use  "images/energy.pdf" >
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+File: images/magnet.pdf Graphic file (type QTm)
+<use  "images/magnet.pdf" >
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+File: images/ferropara.pdf Graphic file (type QTm)
+<use  "images/ferropara.pdf" >
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+File: images/latech.pdf Graphic file (type QTm)
+<use  "images/latech.pdf" >
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Underfull \hbox (badness 1325) in paragraph at lines 242--243
+[]\TU/lmr/m/n/9 Onsager, Lars (1944), ”Crystal statistics. I. A two-dimensional
+ model with
+ []
+
+
+Underfull \hbox (badness 3428) in paragraph at lines 242--243
+\TU/lmr/m/n/9 an order-disorder transition”, Physical Review, Series II, 65 (3–
+4): 117–
+ []
+
+[9] [10] [11] [12] [13] (./main.aux) ) 
 Here is how much of TeX's memory you used:
- 2324 strings out of 493005
- 31190 string characters out of 6134596
- 111647 words of memory out of 5000000
- 6270 multiletter control sequences out of 15000+600000
+ 2338 strings out of 493005
+ 31343 string characters out of 6134596
+ 110647 words of memory out of 5000000
+ 6280 multiletter control sequences out of 15000+600000
  8529 words of font info for 45 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 33i,12n,24p,702b,229s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 33i,12n,24p,740b,254s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (6 pages).
+Output written on main.pdf (13 pages).

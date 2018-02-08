@@ -1,12 +1,13 @@
 import numpy as np
 from numpy import log, sqrt,exp,gradient
 from saveobject import load_obj
-import matplotlib 
-matplotlib.rcParams['text.usetex'] = True
-matplotlib.rcParams['text.latex.unicode'] = True
+
 import matplotlib.pylab as plt
 from scipy.ndimage import convolve
 
+import matplotlib 
+plt.rc('text', usetex=True)
+plt.rc('font', family='serif')
 Stats5=load_obj("stats6")
 Stats6=load_obj("stats7")
 
@@ -43,8 +44,15 @@ fix, ax = plt.subplots()
 #ax.plot(kT, smooth(2*S*log(2)) ,'k-',label=r"$S$")
 
 #ax.errorbar(kT,smooth(M,40),yerr=err/sqrt(10),label=r"$M01$")
-ax.plot(kT, 0.5*(M+M2),"k.",label=r"$M01$")
-ax.plot(kT2, M,"r.",label=r"$C_V$")
+ax.plot(kT, smooth(M),".",label=r"random @ start")
+ax.plot(kT2,smooth(M2),".",label=r"aligned @ start")
+ax.set_xlabel(r"Temperature $1/\tilde\beta$")
+ax.set_ylabel(r"Average Magnetization $\bar M$")
+
+ax.legend()
+
+plt.savefig("ferropara.pdf")
+
 #ax.errorbar(kT,M,yerr=err/sqrt(10),label=r"$M01$")
 #ax.errorbar(kT2, M2 ,yerr=err2/10,label=r"$C_V$")
 

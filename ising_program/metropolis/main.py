@@ -9,7 +9,7 @@ plt.rc('font', family='serif')
 
 beta = 1
 mu = 0
-size=4**0
+size=4**5
 samples = 1024
 dist = IsingDist(size,beta,mu)
 dist.sample(samples)
