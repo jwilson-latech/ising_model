@@ -29,7 +29,7 @@ for beta in tqdm(betas):
 		stat[key]=np.append(stat[key],model.stats[key])
 
 
-plt.plot(T,stat["energy"]-T*stat["entropy"])
+plt.plot(T,stat["energy"])
 plt.ylabel(key.capitalize())
 plt.xlabel("Temperature")
 plt.show()

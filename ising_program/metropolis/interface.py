@@ -21,57 +21,7 @@ def safeEntropy2(p):
 vSE = np.vectorize(safeEntropy)
 vSE2 = np.vectorize(safeEntropy2)
 
-class IsingEnsemble():
-	def __init__(self,size,beta=1.0,mu=0.0,**kwargs):
-		self.size = size
-		self.beta = beta
-		self.mu = mu
-		self.kwargs = kwargs
-		self.stats = {}
-		a = 1.0
-		b = 0.0
-		self.window = np.array([[b,a,b],\
-								[a,0,a],\
-								[b,a,b]])
-
-		self.makeConfigs()
-		print self.configs
-		self.default()
-
-	def default(self):
-		kwargs = self.kwargs
-		if "onlyconfigs" in kwargs:
-			if kwargs["onlyconfigs"]==True:
-				return None
-		else: 
-			self.calcEnergy()
-			self.sortByEnergy()
-			self.calcProb()
-			self.calcStats()
-
-	def set_(self,**kwargs):
-		if "mu" in kwargs:
-			self.mu = kwargs["mu"]
-			self.calcEnergy()
-			self.sortByEnergy()
-		if "beta" in kwargs:
-			self.beta = kwargs["beta"]
-
-		self.calcPart()
-		self.calcProb()
-		self.calcStats()
-
-	def makeConfigs(self):
-		configs=[]
-		m = self.size
-		n = m**2
-		for i in tqdm(range(1<<n)):
-			s=bin(i)[2:]
-			s='0'*(n-len(s))+s
-			p = np.array(map(int,list(s)))
-			p=2*p.reshape((m,m))-1
-			configs.append(p)
-		self.configs = np.array(configs)
+class Interface(object):
 
 	def calcEnergy(self):
 		configs = self.configs
